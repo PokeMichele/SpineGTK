@@ -1,2 +1,2 @@
 # SpineGTK
-An Open-Source Launcher for Spine Emulator built with GTK#
+An Simple Launcher for Spine Emulator built with GTK#
