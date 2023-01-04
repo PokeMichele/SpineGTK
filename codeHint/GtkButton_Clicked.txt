@@ -1,6 +1,0 @@
-/*{ListStore}.Foreach (delegate (ITreeModel model, TreePath path, TreeIter iter)  {
-
-    {Model} modelObj = model.GetValue(iter, 0) as {Model};
-    
-    return false;
-});*/
