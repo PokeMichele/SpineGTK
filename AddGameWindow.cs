@@ -20,10 +20,6 @@ namespace SpineGTK_v1
             {
                 String path = Environment.GetFolderPath(System.Environment.SpecialFolder.UserProfile) + "/SpineGTK/config.xml";
 
-
-
-
-
                 XDocument Xdoc = new XDocument(new XElement("Games"));
 
                 if (File.Exists(path))
