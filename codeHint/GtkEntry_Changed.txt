@@ -1,0 +1,2 @@
+
+string text = ((Gtk.Entry)sender).Text;

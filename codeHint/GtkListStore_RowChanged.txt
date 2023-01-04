@@ -1,0 +1,5 @@
+TreeIter iter;
+if (listStore_{num}.GetIterFromString(out iter, args.Path))
+{
+    {Model} modelObj = ({Model}){ListStore}.GetValue(iter, 0);
+}

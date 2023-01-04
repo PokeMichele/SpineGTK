@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<uiCodeHint>
+    <codeHint uiName="GtkTreeSelection" eventName="Changed" filePath="GtkTreeSelection_Changed.txt" isOutPut ="true" />
+    <codeHint uiName="GtkButton" eventName="Clicked" filePath="GtkButton_Clicked.txt" isOutPut ="true" />
+    <codeHint uiName="GtkComboBox" eventName="Changed" filePath="GtkComboBox_Changed.txt" isOutPut ="true" />
+    <codeHint uiName="GtkEntry" eventName="Changed" filePath="GtkEntry_Changed.txt" isOutPut ="true" />
+    <codeHint uiName="GtkRadioButton" eventName="GroupChanged" filePath="GtkRadioButton_GroupChanged.txt" isOutPut ="true" />
+    <codeHint uiName="GtkCheckButton" eventName="Toggled" filePath="GtkCheckButton_Toggled.txt" isOutPut ="true" />
+    <codeHint uiName="GtkListStore" eventName="RowChanged" filePath="GtkListStore_RowChanged.txt" isOutPut ="true" />
+</uiCodeHint>

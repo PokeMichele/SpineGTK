@@ -1,0 +1,6 @@
+TreeIter iter;
+ITreeModel model;
+if (((Gtk.TreeSelection)sender).GetSelected(out model,out iter))
+{
+    {Model} modelData = ({Model}){ListStore}.GetValue(iter, 0);
+}

@@ -1,9 +1,6 @@
 ﻿using System;
 using Gtk;
-using SpineGTK_v1;
-using System.Xml;
-using System.Xml.Linq;
-
+using SpineGTK;
 
 public partial class MainWindow : Gtk.Window
 {
@@ -20,8 +17,7 @@ public partial class MainWindow : Gtk.Window
 
     protected void OnBtnAddGameClicked(object sender, EventArgs e)
     {
-        AddGameWindow addGameWindow = new AddGameWindow();
+        Window addGameWindow = new Add_Game();
         addGameWindow.Show();
-
     }
 }
