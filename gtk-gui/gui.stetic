@@ -33,7 +33,7 @@
       </widget>
     </child>
   </widget>
-  <widget class="Gtk.Window" id="SpineGTK_v1.AddGameWindow" design-size="403 302">
+  <widget class="Gtk.Window" id="SpineGTK_v1.AddGameWindow" design-size="402 307">
     <property name="MemberName" />
     <property name="Title" translatable="yes">AddGameWindow</property>
     <property name="WindowPosition">CenterOnParent</property>
@@ -41,36 +41,6 @@
       <widget class="Gtk.Fixed" id="fixed1">
         <property name="MemberName" />
         <property name="HasWindow">False</property>
-        <child>
-          <widget class="Gtk.Button" id="btnEnter1">
-            <property name="MemberName" />
-            <property name="CanFocus">True</property>
-            <property name="UseStock">True</property>
-            <property name="Type">StockItem</property>
-            <property name="StockId">gtk-ok</property>
-            <signal name="Clicked" handler="OnBtnEnter1Clicked" />
-            <property name="label">gtk-ok</property>
-          </widget>
-          <packing>
-            <property name="X">353</property>
-            <property name="Y">272</property>
-          </packing>
-        </child>
-        <child>
-          <widget class="Gtk.Button" id="btnCancel1">
-            <property name="MemberName" />
-            <property name="CanFocus">True</property>
-            <property name="UseStock">True</property>
-            <property name="Type">StockItem</property>
-            <property name="StockId">gtk-cancel</property>
-            <signal name="Clicked" handler="OnBtnCancel1Clicked" />
-            <property name="label">gtk-cancel</property>
-          </widget>
-          <packing>
-            <property name="X">272</property>
-            <property name="Y">272</property>
-          </packing>
-        </child>
         <child>
           <widget class="Gtk.Fixed" id="fixed2">
             <property name="MemberName" />
@@ -123,6 +93,50 @@
           <packing>
             <property name="X">119</property>
             <property name="Y">39</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Button" id="btnEnter1">
+            <property name="MemberName" />
+            <property name="CanFocus">True</property>
+            <property name="UseStock">True</property>
+            <property name="Type">StockItem</property>
+            <property name="StockId">gtk-ok</property>
+            <signal name="Clicked" handler="OnBtnEnter1Clicked" />
+            <property name="label">gtk-ok</property>
+          </widget>
+          <packing>
+            <property name="X">352</property>
+            <property name="Y">277</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Button" id="btnCancel1">
+            <property name="MemberName" />
+            <property name="CanFocus">True</property>
+            <property name="UseStock">True</property>
+            <property name="Type">StockItem</property>
+            <property name="StockId">gtk-cancel</property>
+            <signal name="Clicked" handler="OnBtnCancel1Clicked" />
+            <property name="label">gtk-cancel</property>
+          </widget>
+          <packing>
+            <property name="X">271</property>
+            <property name="Y">277</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Button" id="btnInstallSpine">
+            <property name="MemberName" />
+            <property name="CanFocus">True</property>
+            <property name="Type">TextOnly</property>
+            <property name="Label" translatable="yes">Install Spine</property>
+            <property name="UseUnderline">True</property>
+            <signal name="Clicked" handler="OnBtnInstallSpineClicked" />
+          </widget>
+          <packing>
+            <property name="X">1</property>
+            <property name="Y">282</property>
           </packing>
         </child>
       </widget>

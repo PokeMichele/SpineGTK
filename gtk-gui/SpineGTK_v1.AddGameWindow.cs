@@ -6,10 +6,6 @@ namespace SpineGTK_v1
 	{
 		private global::Gtk.Fixed fixed1;
 
-		private global::Gtk.Button btnEnter1;
-
-		private global::Gtk.Button btnCancel1;
-
 		private global::Gtk.Fixed fixed2;
 
 		private global::Gtk.Label lblGameName;
@@ -19,6 +15,12 @@ namespace SpineGTK_v1
 		private global::Gtk.Label lblGameDirectory;
 
 		private global::Gtk.Entry entry2;
+
+		private global::Gtk.Button btnEnter1;
+
+		private global::Gtk.Button btnCancel1;
+
+		private global::Gtk.Button btnInstallSpine;
 
 		protected virtual void Build()
 		{
@@ -32,6 +34,50 @@ namespace SpineGTK_v1
 			this.fixed1.Name = "fixed1";
 			this.fixed1.HasWindow = false;
 			// Container child fixed1.Gtk.Fixed+FixedChild
+			this.fixed2 = new global::Gtk.Fixed();
+			this.fixed2.Name = "fixed2";
+			this.fixed2.HasWindow = false;
+			this.fixed1.Add(this.fixed2);
+			global::Gtk.Fixed.FixedChild w1 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.fixed2]));
+			w1.X = 264;
+			w1.Y = 21;
+			// Container child fixed1.Gtk.Fixed+FixedChild
+			this.lblGameName = new global::Gtk.Label();
+			this.lblGameName.Name = "lblGameName";
+			this.lblGameName.LabelProp = global::Mono.Unix.Catalog.GetString("Game Name:");
+			this.fixed1.Add(this.lblGameName);
+			global::Gtk.Fixed.FixedChild w2 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.lblGameName]));
+			w2.X = 6;
+			w2.Y = 8;
+			// Container child fixed1.Gtk.Fixed+FixedChild
+			this.entry1 = new global::Gtk.Entry();
+			this.entry1.CanFocus = true;
+			this.entry1.Name = "entry1";
+			this.entry1.IsEditable = true;
+			this.entry1.InvisibleChar = '•';
+			this.fixed1.Add(this.entry1);
+			global::Gtk.Fixed.FixedChild w3 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.entry1]));
+			w3.X = 95;
+			w3.Y = 6;
+			// Container child fixed1.Gtk.Fixed+FixedChild
+			this.lblGameDirectory = new global::Gtk.Label();
+			this.lblGameDirectory.Name = "lblGameDirectory";
+			this.lblGameDirectory.LabelProp = global::Mono.Unix.Catalog.GetString("Game Directory:");
+			this.fixed1.Add(this.lblGameDirectory);
+			global::Gtk.Fixed.FixedChild w4 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.lblGameDirectory]));
+			w4.X = 6;
+			w4.Y = 43;
+			// Container child fixed1.Gtk.Fixed+FixedChild
+			this.entry2 = new global::Gtk.Entry();
+			this.entry2.CanFocus = true;
+			this.entry2.Name = "entry2";
+			this.entry2.IsEditable = true;
+			this.entry2.InvisibleChar = '•';
+			this.fixed1.Add(this.entry2);
+			global::Gtk.Fixed.FixedChild w5 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.entry2]));
+			w5.X = 119;
+			w5.Y = 39;
+			// Container child fixed1.Gtk.Fixed+FixedChild
 			this.btnEnter1 = new global::Gtk.Button();
 			this.btnEnter1.CanFocus = true;
 			this.btnEnter1.Name = "btnEnter1";
@@ -39,9 +85,9 @@ namespace SpineGTK_v1
 			this.btnEnter1.UseUnderline = true;
 			this.btnEnter1.Label = "gtk-ok";
 			this.fixed1.Add(this.btnEnter1);
-			global::Gtk.Fixed.FixedChild w1 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.btnEnter1]));
-			w1.X = 353;
-			w1.Y = 272;
+			global::Gtk.Fixed.FixedChild w6 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.btnEnter1]));
+			w6.X = 352;
+			w6.Y = 277;
 			// Container child fixed1.Gtk.Fixed+FixedChild
 			this.btnCancel1 = new global::Gtk.Button();
 			this.btnCancel1.CanFocus = true;
@@ -50,63 +96,30 @@ namespace SpineGTK_v1
 			this.btnCancel1.UseUnderline = true;
 			this.btnCancel1.Label = "gtk-cancel";
 			this.fixed1.Add(this.btnCancel1);
-			global::Gtk.Fixed.FixedChild w2 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.btnCancel1]));
-			w2.X = 272;
-			w2.Y = 272;
+			global::Gtk.Fixed.FixedChild w7 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.btnCancel1]));
+			w7.X = 271;
+			w7.Y = 277;
 			// Container child fixed1.Gtk.Fixed+FixedChild
-			this.fixed2 = new global::Gtk.Fixed();
-			this.fixed2.Name = "fixed2";
-			this.fixed2.HasWindow = false;
-			this.fixed1.Add(this.fixed2);
-			global::Gtk.Fixed.FixedChild w3 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.fixed2]));
-			w3.X = 264;
-			w3.Y = 21;
-			// Container child fixed1.Gtk.Fixed+FixedChild
-			this.lblGameName = new global::Gtk.Label();
-			this.lblGameName.Name = "lblGameName";
-			this.lblGameName.LabelProp = global::Mono.Unix.Catalog.GetString("Game Name:");
-			this.fixed1.Add(this.lblGameName);
-			global::Gtk.Fixed.FixedChild w4 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.lblGameName]));
-			w4.X = 6;
-			w4.Y = 8;
-			// Container child fixed1.Gtk.Fixed+FixedChild
-			this.entry1 = new global::Gtk.Entry();
-			this.entry1.CanFocus = true;
-			this.entry1.Name = "entry1";
-			this.entry1.IsEditable = true;
-			this.entry1.InvisibleChar = '•';
-			this.fixed1.Add(this.entry1);
-			global::Gtk.Fixed.FixedChild w5 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.entry1]));
-			w5.X = 95;
-			w5.Y = 6;
-			// Container child fixed1.Gtk.Fixed+FixedChild
-			this.lblGameDirectory = new global::Gtk.Label();
-			this.lblGameDirectory.Name = "lblGameDirectory";
-			this.lblGameDirectory.LabelProp = global::Mono.Unix.Catalog.GetString("Game Directory:");
-			this.fixed1.Add(this.lblGameDirectory);
-			global::Gtk.Fixed.FixedChild w6 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.lblGameDirectory]));
-			w6.X = 6;
-			w6.Y = 43;
-			// Container child fixed1.Gtk.Fixed+FixedChild
-			this.entry2 = new global::Gtk.Entry();
-			this.entry2.CanFocus = true;
-			this.entry2.Name = "entry2";
-			this.entry2.IsEditable = true;
-			this.entry2.InvisibleChar = '•';
-			this.fixed1.Add(this.entry2);
-			global::Gtk.Fixed.FixedChild w7 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.entry2]));
-			w7.X = 119;
-			w7.Y = 39;
+			this.btnInstallSpine = new global::Gtk.Button();
+			this.btnInstallSpine.CanFocus = true;
+			this.btnInstallSpine.Name = "btnInstallSpine";
+			this.btnInstallSpine.UseUnderline = true;
+			this.btnInstallSpine.Label = global::Mono.Unix.Catalog.GetString("Install Spine");
+			this.fixed1.Add(this.btnInstallSpine);
+			global::Gtk.Fixed.FixedChild w8 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.btnInstallSpine]));
+			w8.X = 1;
+			w8.Y = 282;
 			this.Add(this.fixed1);
 			if ((this.Child != null))
 			{
 				this.Child.ShowAll();
 			}
-			this.DefaultWidth = 403;
-			this.DefaultHeight = 302;
+			this.DefaultWidth = 402;
+			this.DefaultHeight = 307;
 			this.Show();
 			this.btnEnter1.Clicked += new global::System.EventHandler(this.OnBtnEnter1Clicked);
 			this.btnCancel1.Clicked += new global::System.EventHandler(this.OnBtnCancel1Clicked);
+			this.btnInstallSpine.Clicked += new global::System.EventHandler(this.OnBtnInstallSpineClicked);
 		}
 	}
 }

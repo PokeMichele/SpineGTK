@@ -4,6 +4,7 @@ using SpineGTK_v1;
 using System.Xml;
 using System.Xml.Linq;
 using System.Diagnostics;
+using System.Collections.Generic;
 
 public partial class MainWindow : Gtk.Window
 {
@@ -30,9 +31,32 @@ public partial class MainWindow : Gtk.Window
         fixed1.Add(vbox);
     }
 
-    //Each Button Function
+
+
     private void OnButtonClicked(object sender, EventArgs e)
     {
+        // Try to give permissions for the executable file
+        try
+        {
+            Process process = new Process();
+            process.StartInfo.FileName = "/bin/bash";
+            process.StartInfo.Arguments = $"-c \"chmod a+rwx {Environment.GetFolderPath(System.Environment.SpecialFolder.UserProfile)}/SpineGTK/Spine/20220517/spine\"";
+            process.StartInfo.UseShellExecute = false;
+            process.StartInfo.RedirectStandardInput = true;
+            process.Start();
+            process.WaitForExit();
+            Console.WriteLine("File Permissions given successfully");
+            if (process.ExitCode != 0)
+            {
+                Console.WriteLine("Warning: Folder's permissions not set. Try executing this Software as ROOT");
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("Error: An exception occurred while trying to set folder's permissions: {0}", ex.Message);
+        }
+
+        // Shell command to run the game
         String path = Environment.GetFolderPath(System.Environment.SpecialFolder.UserProfile) + "/SpineGTK/config.xml";
         XmlDocument doc = new XmlDocument();
         doc.Load(path);
@@ -40,13 +64,11 @@ public partial class MainWindow : Gtk.Window
         foreach (XmlNode node in nodeList)
         {
             XmlNode childNode = node.SelectSingleNode("Directory");
-
-            //Shell Command
             try
             {
                 Process process = new Process();
                 process.StartInfo.FileName = "/bin/bash";
-                process.StartInfo.Arguments = "-c \"spine " + childNode.InnerText + "\""; //bash -c spine /your/game/directory/   PLEASE NOTE: Spine must be installed
+                process.StartInfo.Arguments = $"-c \"{Environment.GetFolderPath(System.Environment.SpecialFolder.UserProfile)}/SpineGTK/Spine/spine {childNode.InnerText}\"";
                 process.StartInfo.UseShellExecute = false;
                 process.StartInfo.RedirectStandardOutput = true;
                 process.Start();
@@ -60,6 +82,7 @@ public partial class MainWindow : Gtk.Window
             }
         }
     }
+
 
 
     protected void OnDeleteEvent(object sender, DeleteEventArgs a)
