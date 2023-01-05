@@ -35,6 +35,9 @@ public partial class MainWindow : Gtk.Window
 
     private void OnButtonClicked(object sender, EventArgs e)
     {
+        Button clickedButton = sender as Button;
+        string gameName = clickedButton.Label;
+
         // Try to give permissions for the executable file
         try
         {
@@ -48,27 +51,27 @@ public partial class MainWindow : Gtk.Window
             Console.WriteLine("File Permissions given successfully");
             if (process.ExitCode != 0)
             {
-                Console.WriteLine("Warning: Folder's permissions not set. Try executing this Software as ROOT");
+                Console.WriteLine("Warning: File permissions not set. Try executing this Software as ROOT");
             }
         }
         catch (Exception ex)
         {
-            Console.WriteLine("Error: An exception occurred while trying to set folder's permissions: {0}", ex.Message);
+            Console.WriteLine("Error: An exception occurred while trying to set file's permissions: {0}", ex.Message);
         }
 
         // Shell command to run the game
         String path = Environment.GetFolderPath(System.Environment.SpecialFolder.UserProfile) + "/SpineGTK/config.xml";
         XmlDocument doc = new XmlDocument();
         doc.Load(path);
-        XmlNodeList nodeList = doc.SelectNodes("/Games/Game");
-        foreach (XmlNode node in nodeList)
+        XmlNode gameNode = doc.SelectSingleNode("/Games/Game[Name='" + gameName + "']");
+        if (gameNode != null)
         {
-            XmlNode childNode = node.SelectSingleNode("Directory");
+            XmlNode directoryNode = gameNode.SelectSingleNode("Directory");
             try
             {
                 Process process = new Process();
                 process.StartInfo.FileName = "/bin/bash";
-                process.StartInfo.Arguments = $"-c \"{Environment.GetFolderPath(System.Environment.SpecialFolder.UserProfile)}/SpineGTK/Spine/spine {childNode.InnerText}\"";
+                process.StartInfo.Arguments = $"-c \"{Environment.GetFolderPath(System.Environment.SpecialFolder.UserProfile)}/SpineGTK/Spine/20220517/spine {directoryNode.InnerText}\"";
                 process.StartInfo.UseShellExecute = false;
                 process.StartInfo.RedirectStandardOutput = true;
                 process.Start();
