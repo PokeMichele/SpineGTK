@@ -45,5 +45,11 @@ SpineGTK is a simple GUI Launcher for Spine made with GTKSharp and Mono.
     - I wanted to practice with C# and I think it's one of the best Object-Oriented Languages to use for this project.
 - Why Mono and GTKSharp?
     - I used Mono and GTKSharp because they are simpler to learn than other Cross-Platform Frameworks, like [Avalonia](https://avaloniaui.net/) + You can run the software with all your beautiful GTK Themes.
+- Is SpineGTK related to the original Spine Project?
+    - No, SpineGTK is an indipendent project made by PokeMichele.
+- Is SpineGTK legal?
+    - Yes, because the only goal of this software is to wrap the original emulator with a GUI.
+## Troubleshooting
+- If you run into some problems before opening an issue make sure it's not a Spine problem. If so, check that the error hasn't already been reported in [Their Repository](https://github.com/devofspine/spine)
 ## Credits & License
  - SpineGTK is made using [Mono](https://www.mono-project.com/) and [GTKSharp](https://www.mono-project.com/docs/gui/gtksharp/) and it's released under [CC BY-NC 4.0 License](https://creativecommons.org/licenses/by-nc/4.0/).
