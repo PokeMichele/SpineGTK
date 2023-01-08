@@ -6,10 +6,12 @@
   <import>
     <widget-library name="../bin/Debug/SpineGTK_v1.exe" internal="true" />
   </import>
-  <widget class="Gtk.Window" id="MainWindow" design-size="433 309">
+  <widget class="Gtk.Window" id="MainWindow" design-size="1889 940">
     <property name="MemberName" />
     <property name="Title" translatable="yes">MainWindow</property>
     <property name="WindowPosition">CenterOnParent</property>
+    <property name="DefaultWidth">1920</property>
+    <property name="DefaultHeight">1080</property>
     <signal name="DeleteEvent" handler="OnDeleteEvent" />
     <child>
       <widget class="Gtk.Fixed" id="fixed1">
@@ -26,8 +28,8 @@
             <property name="label">gtk-add</property>
           </widget>
           <packing>
-            <property name="X">344</property>
-            <property name="Y">279</property>
+            <property name="X">1800</property>
+            <property name="Y">910</property>
           </packing>
         </child>
       </widget>
@@ -37,6 +39,8 @@
     <property name="MemberName" />
     <property name="Title" translatable="yes">AddGameWindow</property>
     <property name="WindowPosition">CenterOnParent</property>
+    <property name="Resizable">False</property>
+    <property name="AllowGrow">False</property>
     <child>
       <widget class="Gtk.Fixed" id="fixed1">
         <property name="MemberName" />
@@ -59,18 +63,6 @@
           <packing>
             <property name="X">6</property>
             <property name="Y">8</property>
-          </packing>
-        </child>
-        <child>
-          <widget class="Gtk.Entry" id="entry1">
-            <property name="MemberName" />
-            <property name="CanFocus">True</property>
-            <property name="IsEditable">True</property>
-            <property name="InvisibleChar">•</property>
-          </widget>
-          <packing>
-            <property name="X">95</property>
-            <property name="Y">6</property>
           </packing>
         </child>
         <child>
@@ -137,6 +129,18 @@
           <packing>
             <property name="X">1</property>
             <property name="Y">282</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Entry" id="entry1">
+            <property name="MemberName" />
+            <property name="CanFocus">True</property>
+            <property name="IsEditable">True</property>
+            <property name="InvisibleChar">•</property>
+          </widget>
+          <packing>
+            <property name="X">119</property>
+            <property name="Y">7</property>
           </packing>
         </child>
       </widget>

@@ -14,9 +14,10 @@ public partial class MainWindow
 		this.Name = "MainWindow";
 		this.Title = global::Mono.Unix.Catalog.GetString("MainWindow");
 		this.WindowPosition = ((global::Gtk.WindowPosition)(4));
+		this.DefaultWidth = 1920;
+		this.DefaultHeight = 1080;
 		// Container child MainWindow.Gtk.Container+ContainerChild
 		this.fixed1 = new global::Gtk.Fixed();
-		this.fixed1.Name = "fixed1";
 		this.fixed1.HasWindow = false;
 		// Container child fixed1.Gtk.Fixed+FixedChild
 		this.btnAddGame = new global::Gtk.Button();
@@ -27,15 +28,13 @@ public partial class MainWindow
 		this.btnAddGame.Label = "gtk-add";
 		this.fixed1.Add(this.btnAddGame);
 		global::Gtk.Fixed.FixedChild w1 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.btnAddGame]));
-		w1.X = 344;
-		w1.Y = 279;
+		w1.X = 1800;
+		w1.Y = 910;
 		this.Add(this.fixed1);
 		if ((this.Child != null))
 		{
 			this.Child.ShowAll();
 		}
-		this.DefaultWidth = 433;
-		this.DefaultHeight = 309;
 		this.Show();
 		this.DeleteEvent += new global::Gtk.DeleteEventHandler(this.OnDeleteEvent);
 		this.btnAddGame.Clicked += new global::System.EventHandler(this.OnBtnAddGameClicked);
