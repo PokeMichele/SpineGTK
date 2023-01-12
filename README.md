@@ -47,7 +47,9 @@ SpineGTK is a simple GUI Launcher for Spine made with GTKSharp and Mono.
 - Click "Add Game" button
 - If you are running the software for the first time click the "Install Spine" button and wait until the software unlocks itself (it may take a while depending on your connection speed).
 - Insert a Name for the Game and the Path of the file (you must use a file format that is compatible with Spine).
+
 ![AddGameScreenshot](SpineGTKScreen1.jpg)
+
 - Click the Ok/Enter Button
 - If you don't see the game you've just added try to reload the Software.
 - Click the new game's button to run it
