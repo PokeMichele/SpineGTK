@@ -23,6 +23,10 @@ SpineGTK is a simple GUI Launcher for Spine made with GTKSharp and Mono.
             ```
         - On RedHat-Based Distros:
             ```
+            sudo yum install mono-complete
+            ```
+             or
+            ```
             sudo dnf install mono-devel
             ```
         - On Arch-Based Distros
@@ -39,6 +43,14 @@ SpineGTK is a simple GUI Launcher for Spine made with GTKSharp and Mono.
         mono SpineGTK_v1.exe -r:adk-sharp.dll -r:gdk-sharp.dll -r:gio-sharp.dll -r:glade-sharp.dll -r:glib-sharp.dll -r:gtk-sharp.dll -r:Mono.Posix.dll -r:pango-sharp -r:System.dll -r:System.IO.Compression.dll -r:System.IO.Compression.FileSystem.dll -r:System.Net.dll -r:System.Xml.dll -r:System.Xml.Linq.dll
         ```
         If you prefer you can create a shell script.
+## Behaviour
+- Click "Add Game" button
+- If you are running the software for the first time click the "Install Spine" button and wait until the software unlocks itself (it may take a while depending on your connection speed).
+- Insert a Name for the Game and the Path of the file (you must use a file format that is compatible with Spine).
+![AddGameScreenshot](SpineGTKScreen1.jpg)
+- Click the Ok/Enter Button
+- If you don't see the game you've just added try to reload the Software.
+- Click the new game's button to run it
 ## Building from Source
 - The simplest way to build this project is installing MonoDevelop and make it compile the project by itself:
     - Install MonoDevelop (See the official [Installation Instructions](https://www.monodevelop.com/download/))
