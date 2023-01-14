@@ -43,16 +43,16 @@ SpineGTK is a simple GUI Launcher for Spine made with GTKSharp and Mono.
         ```
     - Install the dependencies (only if it's necessary)
         ```
-        nuget install AtkSharp -ExcludeVersion -OutputDirectory .
-        nuget install GdkSharp -ExcludeVersion -OutputDirectory .
-        nuget install GioSharp -ExcludeVersion -OutputDirectory .
-        nuget install GLibSharp -ExcludeVersion -OutputDirectory .
-        nuget install GtkSharp -ExcludeVersion -OutputDirectory .
-        nuget install Mono.Posix -ExcludeVersion -OutputDirectory .            #For Older Mono Versions
-        nuget install System.Native.Posix -ExcludeVersion -OutputDirectory .   #For Newer Mono Versions
-        nuget install PangoSharp -ExcludeVersion -OutputDirectory .
-        nuget install System.IO.Compression -ExcludeVersion -OutputDirectory .
-        nuget install System.Xml.Linq -ExcludeVersion -OutputDirectory .
+        nuget install AtkSharp -NoCache -OutputDirectory .
+        nuget install GdkSharp -NoCache -OutputDirectory .
+        nuget install GioSharp -NoCache -OutputDirectory .
+        nuget install GLibSharp -NoCache -OutputDirectory .
+        nuget install GtkSharp -NoCache -OutputDirectory .
+        nuget install Mono.Posix -NoCache -OutputDirectory .            #For Older Mono Versions
+        nuget install System.Native.Posix -NoCache -OutputDirectory .   #For Newer Mono Versions
+        nuget install PangoSharp -NoCache -OutputDirectory .
+        nuget install System.IO.Compression -NoCache -OutputDirectory .
+        nuget install System.Xml.Linq -NoCache -OutputDirectory .
         ```
     - Execute the Software with all its dependencies:
         ```
