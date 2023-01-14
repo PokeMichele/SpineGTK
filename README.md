@@ -12,7 +12,7 @@ SpineGTK is a simple GUI Launcher for Spine made with GTKSharp and Mono.
 
 ## Installation
 - ### Mono
-    - First of all you need to install Mono (6.12.0.182+) and NuGet:
+    - First of all you need to install Mono (6.12.0.182+) and NuGet (2.12+):
         - On Debian-Based Distros:
             ```
             sudo apt-get install mono-complete nuget
