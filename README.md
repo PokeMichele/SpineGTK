@@ -12,35 +12,48 @@ SpineGTK is a simple GUI Launcher for Spine made with GTKSharp and Mono.
 
 ## Installation
 - ### Mono
-    - First of all you need to install Mono (6.12.0.182+):
+    - First of all you need to install Mono (6.12.0.182+) and NuGet:
         - On Debian-Based Distros:
             ```
-            sudo apt-get install mono-complete
+            sudo apt-get install mono-complete nuget
             ```
         - On SUSE-Based Distros
             ```
-            sudo zypper in mono-complete
+            sudo zypper in mono-complete nuget
             ```
         - On RedHat-Based Distros:
             ```
-            sudo yum install mono-complete
+            sudo yum install mono-complete nuget
             ```
              or
             ```
-            sudo dnf install mono-devel
+            sudo dnf install mono-devel nuget
             ```
         - On Arch-Based Distros
             ```
             sudo pacman -S mono
+            sudo yay -S nuget
             ```
     - Make sure you have all the permissions needed to run the file
         ```
         chmod +x /your/directory/SpineGTK_v1.exe
         ```
-    - Install the dependencies (only if needed - [See How](https://github.com/GtkSharp/GtkSharp/blob/develop/README.md))
+    - Install the dependencies (only if it's necessary)
+        ```
+        nuget install AtkSharp
+        nuget install GdkSharp
+        nuget install GioSharp
+        nuget install GLibSharp
+        nuget install GtkSharp
+        nuget install Mono.Posix            #For Older Mono Versions
+        nuget install System.Native.Posix   #For Newer Mono Versions
+        nuget install PangoSharp
+        nuget install System.IO.Compression
+        nuget install System.Xml.Linq
+        ```
     - Execute the Software with all its dependencies:
         ```
-        mono SpineGTK_v1.exe -r:adk-sharp.dll -r:gdk-sharp.dll -r:gio-sharp.dll -r:glade-sharp.dll -r:glib-sharp.dll -r:gtk-sharp.dll -r:Mono.Posix.dll -r:pango-sharp -r:System.dll -r:System.IO.Compression.dll -r:System.IO.Compression.FileSystem.dll -r:System.Net.dll -r:System.Xml.dll -r:System.Xml.Linq.dll
+        mono SpineGTK_v1.exe -r:adk-sharp.dll -r:gdk-sharp.dll -r:gio-sharp.dll -r:glade-sharp.dll -r:glib-sharp.dll -r:gtk-sharp.dll -r:Mono.Posix.dll -r:pango-sharp.dll -r:System.dll -r:System.IO.Compression.dll -r:System.IO.Compression.FileSystem.dll -r:System.Net.dll -r:System.Xml.dll -r:System.Xml.Linq.dll
         ```
         If you prefer you can create a shell script.
 ## Behaviour
