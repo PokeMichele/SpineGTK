@@ -54,9 +54,9 @@ SpineGTK is a simple GUI Launcher for Spine made with GTKSharp and Mono.
         nuget install System.IO.Compression -NoCache -OutputDirectory .
         nuget install System.Xml.Linq -NoCache -OutputDirectory .
         ```
-    - Execute the Software with all its dependencies:
+    - Execute the Software with all its dependencies (some dll names may change base on the download source):
         ```
-        mono SpineGTK_v1.exe -r:AdkSharp.dll -r:GdkSharp.dll -r:GioSharp.dll -r:Glade-Sharp.dll -r:GLibSharp.dll -r:GtkSharp.dll -r:Mono.Posix.dll -r:PangoSharp.dll -r:System.IO.Compression.dll -r:System.Xml.Linq.dll
+        mono SpineGTK_v1.exe -r:atk-sharp.dll -r:gdk-sharp.dll -r:gio-sharp.dll -r:glade-sharp.dll -r:glib-sharp.dll -r:gtk-sharp.dll -r:Mono.Posix.dll -r:pango-sharp.dll -r:System.dll -r:System.IO.Compression.dll -r:System.IO.Compression.FileSystem.dll -r:System.Net.dll -r:System.Xml.dll -r:System.Xml.Linq.dll
         ```
         If you prefer you can create a shell script.
 ## Behaviour
