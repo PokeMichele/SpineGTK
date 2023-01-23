@@ -27,10 +27,9 @@ namespace SpineGTK_v1
 			global::Stetic.Gui.Initialize(this);
 			// Widget SpineGTK_v1.AddGameWindow
 			this.Name = "SpineGTK_v1.AddGameWindow";
-			this.Title = global::Mono.Unix.Catalog.GetString("AddGameWindow");
+			this.Title = global::Mono.Unix.Catalog.GetString("Add Game");
 			this.WindowPosition = ((global::Gtk.WindowPosition)(4));
 			this.Resizable = false;
-			// Container child SpineGTK_v1.AddGameWindow.Gtk.Container+ContainerChild
 			this.fixed1 = new global::Gtk.Fixed();
 			this.fixed1.HasWindow = false;
 			// Container child fixed1.Gtk.Fixed+FixedChild

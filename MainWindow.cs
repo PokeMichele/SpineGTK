@@ -5,6 +5,7 @@ using System.Xml;
 using System.Xml.Linq;
 using System.Diagnostics;
 using System.Collections.Generic;
+using System.IO;
 
 public partial class MainWindow : Gtk.Window
 {
@@ -14,7 +15,18 @@ public partial class MainWindow : Gtk.Window
 
         String path = Environment.GetFolderPath(System.Environment.SpecialFolder.UserProfile) + "/SpineGTK/config.xml";
         XmlDocument doc = new XmlDocument();
-        doc.Load(path);
+        XDocument Xdoc = new XDocument(new XElement("Games"));
+
+        if (File.Exists(path))
+        {
+            Xdoc = XDocument.Load(path);
+            doc.Load(path);
+        }
+        else
+        {
+            Xdoc = new XDocument(new XElement("Games"));
+        }
+
 
         XmlNodeList nodeList = doc.SelectNodes("/Games/Game");
         VBox vbox = new VBox();

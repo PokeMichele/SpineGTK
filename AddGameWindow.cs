@@ -107,7 +107,7 @@ namespace SpineGTK_v1
 
             //Download File
             string fileToDownload = filePath + "spine-20220517.zip";
-            if(!File.Exists(fileToDownload))
+            if (!File.Exists(fileToDownload))
             {
                 try
                 {
