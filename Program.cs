@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using Gtk;
+using System.Linq;
 using System.Xml;
 
 namespace SpineGTK_v1
@@ -12,11 +13,23 @@ namespace SpineGTK_v1
             Application.Init();
             MainWindow win = new MainWindow();
 
-            String Path = Environment.GetFolderPath(System.Environment.SpecialFolder.UserProfile) + "/SpineGTK/config.xml";
-
-            if (!Directory.Exists(Environment.GetFolderPath(System.Environment.SpecialFolder.UserProfile) + "/SpineGTK"))
+            string home = Environment.GetEnvironmentVariable("HOME");
+            if (string.IsNullOrEmpty(home))
             {
-                Directory.CreateDirectory(Environment.GetFolderPath(System.Environment.SpecialFolder.UserProfile) + "/SpineGTK");
+                var passwd = File.ReadAllLines("/etc/passwd");
+                var entry = passwd.FirstOrDefault(x => x.StartsWith(Environment.UserName + ":"));
+                if (entry != null)
+                {
+                    var parts = entry.Split(':');
+                    home = parts[5];
+                }
+            }
+
+            String Path = home + "/SpineGTK/config.xml";
+
+            if (!Directory.Exists(home + "/SpineGTK"))
+            {
+                Directory.CreateDirectory(home + "/SpineGTK");
             }
 
             win.ShowAll();

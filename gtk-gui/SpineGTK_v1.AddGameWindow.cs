@@ -30,7 +30,9 @@ namespace SpineGTK_v1
 			this.Title = global::Mono.Unix.Catalog.GetString("Add Game");
 			this.WindowPosition = ((global::Gtk.WindowPosition)(4));
 			this.Resizable = false;
+			// Container child SpineGTK_v1.AddGameWindow.Gtk.Container+ContainerChild
 			this.fixed1 = new global::Gtk.Fixed();
+			this.fixed1.Name = "fixed1";
 			this.fixed1.HasWindow = false;
 			// Container child fixed1.Gtk.Fixed+FixedChild
 			this.fixed2 = new global::Gtk.Fixed();

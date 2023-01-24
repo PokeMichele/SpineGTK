@@ -6,6 +6,7 @@ using System.Xml.Linq;
 using System.Diagnostics;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 
 public partial class MainWindow : Gtk.Window
 {
@@ -13,7 +14,19 @@ public partial class MainWindow : Gtk.Window
     {
         Build();
 
-        String path = Environment.GetFolderPath(System.Environment.SpecialFolder.UserProfile) + "/SpineGTK/config.xml";
+        string home = Environment.GetEnvironmentVariable("HOME");
+        if (string.IsNullOrEmpty(home))
+        {
+            var passwd = File.ReadAllLines("/etc/passwd");
+            var entry = passwd.FirstOrDefault(x => x.StartsWith(Environment.UserName + ":"));
+            if (entry != null)
+            {
+                var parts = entry.Split(':');
+                home = parts[5];
+            }
+        }
+
+        String path = home + "/SpineGTK/config.xml";
         XmlDocument doc = new XmlDocument();
         XDocument Xdoc = new XDocument(new XElement("Games"));
 
@@ -50,12 +63,24 @@ public partial class MainWindow : Gtk.Window
         Button clickedButton = sender as Button;
         string gameName = clickedButton.Label;
 
+        string home = Environment.GetEnvironmentVariable("HOME");
+        if (string.IsNullOrEmpty(home))
+        {
+            var passwd = File.ReadAllLines("/etc/passwd");
+            var entry = passwd.FirstOrDefault(x => x.StartsWith(Environment.UserName + ":"));
+            if (entry != null)
+            {
+                var parts = entry.Split(':');
+                home = parts[5];
+            }
+        }
+
         // Try to give permissions for the executable file
         try
         {
             Process process = new Process();
             process.StartInfo.FileName = "/bin/bash";
-            process.StartInfo.Arguments = $"-c \"chmod a+rwx {Environment.GetFolderPath(System.Environment.SpecialFolder.UserProfile)}/SpineGTK/Spine/20220517/spine\"";
+            process.StartInfo.Arguments = $"-c \"chmod a+rwx {home}/SpineGTK/Spine/20220517/spine\"";
             process.StartInfo.UseShellExecute = false;
             process.StartInfo.RedirectStandardInput = true;
             process.Start();
@@ -72,7 +97,7 @@ public partial class MainWindow : Gtk.Window
         }
 
         // Shell command to run the game
-        String path = Environment.GetFolderPath(System.Environment.SpecialFolder.UserProfile) + "/SpineGTK/config.xml";
+        String path = home + "/SpineGTK/config.xml";
         XmlDocument doc = new XmlDocument();
         doc.Load(path);
         XmlNode gameNode = doc.SelectSingleNode("/Games/Game[Name='" + gameName + "']");
@@ -83,7 +108,7 @@ public partial class MainWindow : Gtk.Window
             {
                 Process process = new Process();
                 process.StartInfo.FileName = "/bin/bash";
-                process.StartInfo.Arguments = $"-c \"{Environment.GetFolderPath(System.Environment.SpecialFolder.UserProfile)}/SpineGTK/Spine/20220517/spine {directoryNode.InnerText}\"";
+                process.StartInfo.Arguments = $"-c \"{home}/SpineGTK/Spine/20220517/spine {directoryNode.InnerText}\"";
                 process.StartInfo.UseShellExecute = false;
                 process.StartInfo.RedirectStandardOutput = true;
                 process.Start();

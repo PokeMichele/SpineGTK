@@ -19,9 +19,21 @@ namespace SpineGTK_v1
 
         protected void OnBtnEnter1Clicked(object sender, EventArgs e)
         {
+            string home = Environment.GetEnvironmentVariable("HOME");
+            if (string.IsNullOrEmpty(home))
+            {
+                var passwd = File.ReadAllLines("/etc/passwd");
+                var entry = passwd.FirstOrDefault(x => x.StartsWith(Environment.UserName + ":"));
+                if (entry != null)
+                {
+                    var parts = entry.Split(':');
+                    home = parts[5];
+                }
+            }
+
             if (entry1.Text != "" && entry2.Text != "")
             {
-                String path = Environment.GetFolderPath(System.Environment.SpecialFolder.UserProfile) + "/SpineGTK/config.xml";
+                String path = home + "/SpineGTK/config.xml";
 
                 XDocument Xdoc = new XDocument(new XElement("Games"));
 
@@ -73,9 +85,21 @@ namespace SpineGTK_v1
 
         protected void OnBtnInstallSpineClicked(object sender, EventArgs e)
         {
+            string home = Environment.GetEnvironmentVariable("HOME");
+            if (string.IsNullOrEmpty(home))
+            {
+                var passwd = File.ReadAllLines("/etc/passwd");
+                var entry = passwd.FirstOrDefault(x => x.StartsWith(Environment.UserName + ":"));
+                if (entry != null)
+                {
+                    var parts = entry.Split(':');
+                    home = parts[5];
+                }
+            }
+
             //File to Download & Download Path
-            string url = "https://download1654.mediafire.com/rqlparu2cfog/iu19u2ratkbbz92/spine-20220517.zip";
-            string filePath = Environment.GetFolderPath(System.Environment.SpecialFolder.UserProfile) + "/SpineGTK/";
+            string url = "https://github.com/devofspine/spine/releases/download/20220517/spine-20220517.zip";
+            string filePath = home + "/SpineGTK/";
 
             //Check if the directory exists
             if (!Directory.Exists(filePath))
