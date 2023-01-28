@@ -108,4 +108,4 @@ SpineGTK is a simple GUI Launcher for Spine made with GTKSharp and Mono.
 ## Troubleshooting
 - If you run into some problems before opening an issue make sure it's not a Spine problem. If so, check that the error hasn't already been reported in [Their Repository](https://github.com/devofspine/spine)
 ## Credits & License
- - SpineGTK is made using [Mono](https://www.mono-project.com/) and [GTKSharp](https://www.mono-project.com/docs/gui/gtksharp/), wraps [Spine](https://github.com/devofspine/spine/) with a GUI and it's released under [CC BY-NC 4.0 License](https://creativecommons.org/licenses/by-nc/4.0/).
+ - SpineGTK is made using [Mono](https://www.mono-project.com/), [GTKSharp](https://www.mono-project.com/docs/gui/gtksharp/) and [Docker](https://www.docker.com/), wraps [Spine](https://github.com/devofspine/spine/) with a GUI and it's released under [CC BY-NC 4.0 License](https://creativecommons.org/licenses/by-nc/4.0/).
