@@ -34,6 +34,8 @@ SpineGTK is a simple GUI Launcher for Spine made with GTKSharp and Mono.
         docker run --network=host --env DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -it pokemichele/spinegtk:v1
         ```
         NOTE: You can change some parameters based on your host machine
+        
+        NOTE: You may have to pass Game Files through Docker to see them inside the FileSystem
 - ### Mono [Obsolete]
     - First of all you need to install Mono (6.12.0.182+) and NuGet (2.12+):
         - On Debian-Based Distros:
