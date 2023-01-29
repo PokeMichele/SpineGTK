@@ -104,7 +104,7 @@ SpineGTK is a simple GUI Launcher for Spine made with GTKSharp and Mono.
 - Why Mono and GTKSharp?
     - I used Mono and GTKSharp because they are simpler to learn than other Cross-Platform Frameworks, like [Avalonia](https://avaloniaui.net/) + You can run the software with all your beautiful GTK Themes.
 - Why Docker?
-    - I used docker to build and distribute this project because it was simpler for building GTKSharp Applications with their dependencies than other solutions like Flatpak or AppImage.
+    - I used docker to build and distribute this project because it was simpler for building GTKSharp Applications with their dependencies than other solutions like [Flatpak](https://flatpak.org/) or [AppImage](https://appimage.org/).
 - Is SpineGTK related to the original Spine Project?
     - No, SpineGTK is an indipendent project made by PokeMichele.
 - Is SpineGTK legal?
