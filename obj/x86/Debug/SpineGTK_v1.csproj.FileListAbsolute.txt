@@ -1,9 +1,0 @@
-/home/michele/Projects/SpineGTK_v1/SpineGTK_v1/bin/Debug/SpineGTK_v1.exe
-/home/michele/Projects/SpineGTK_v1/SpineGTK_v1/bin/Debug/SpineGTK_v1.pdb
-/home/michele/Projects/SpineGTK_v1/SpineGTK_v1/bin/Debug/atk-sharp.dll
-/home/michele/Projects/SpineGTK_v1/SpineGTK_v1/bin/Debug/atk-sharp.dll.config
-/home/michele/Projects/SpineGTK_v1/SpineGTK_v1/obj/x86/Debug/SpineGTK_v1.csproj.CoreCompileInputs.cache
-/home/michele/Projects/SpineGTK_v1/SpineGTK_v1/obj/x86/Debug/SpineGTK_v1.csproj.CopyComplete
-/home/michele/Projects/SpineGTK_v1/SpineGTK_v1/obj/x86/Debug/SpineGTK_v1.exe
-/home/michele/Projects/SpineGTK_v1/SpineGTK_v1/obj/x86/Debug/SpineGTK_v1.pdb
-/home/michele/Projects/SpineGTK_v1/SpineGTK_v1/obj/x86/Debug/SpineGTK_v1.csproj.AssemblyReference.cache

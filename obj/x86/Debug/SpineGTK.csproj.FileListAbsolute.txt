@@ -1,2 +1,0 @@
-/home/michele/Projects/SpineGTK/SpineGTK/obj/x86/Debug/SpineGTK.csproj.AssemblyReference.cache
-/home/michele/Projects/SpineGTK/SpineGTK/obj/x86/Debug/SpineGTK.csproj.CoreCompileInputs.cache
