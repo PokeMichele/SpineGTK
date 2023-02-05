@@ -1,14 +1,14 @@
 # SpineGTK
 ![C#](https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=c-sharp&logoColor=white) ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black) ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white) [![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC_BY--NC_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
 
-SpineGTK is a simple GUI Launcher for Spine made with GTKSharp and Mono.
+SpineGTK is a Cross-Platform GUI Launcher for Spine made with GTKSharp and Mono.
 
 ## Platforms
-|Platform|Status                                               |
-|--------|-----------------------------------------------------|
-|Linux   |Working                                              |
-|Windows |Some Functions may work, but you don't need to run it|
-|MacOS   |Not Working                                          |
+|Platform|Status    |
+|--------|----------|
+|Linux   |Working   |
+|Windows |Working   |
+|MacOS   |Not Tested|
 
 ## Installation
 - ### Docker
@@ -21,6 +21,10 @@ SpineGTK is a simple GUI Launcher for Spine made with GTKSharp and Mono.
             - [See How](https://docs.docker.com/desktop/install/fedora/)
         - On Arch-Based Distros:
             - [See How](https://docs.docker.com/desktop/install/archlinux/)
+        - On Windows:
+            - [See How](https://docs.docker.com/desktop/install/windows-install/)
+        - On MacOS:
+            - [See How](https://docs.docker.com/desktop/install/mac-install/)
      - Pull the Release from Docker Hub:
         ```
         docker pull pokemichele/spinegtk:v1
@@ -29,10 +33,16 @@ SpineGTK is a simple GUI Launcher for Spine made with GTKSharp and Mono.
         ```
         xhost + local:
         ```
+        NOTE: On Windows and MacOS you may have to install an XServer Software like VcXsrv, Xming (For Windows) or XQuartz (For MacOS) and get the WSL/XServer IP Address using 'ipconfig'
      - Run it with the following Command:
         ```
         docker run --network=host --env DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -it pokemichele/spinegtk:v1
         ```
+        or [On Windows]
+        ```
+        docker run --network=host --env DISPLAY=x.x.x.x:0.0 -it pokemichele/spinegtk:v1
+        ```
+        (Replace x.x.x.x with your WSL/XServer IP Address)
         NOTE: You can change some parameters based on your host machine
         
         NOTE: You may have to pass Game Files through Docker to see them inside the FileSystem
