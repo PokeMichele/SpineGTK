@@ -33,6 +33,7 @@ SpineGTK is a Cross-Platform GUI Launcher for Spine made with GTKSharp and Mono.
         ```
         xhost + local:
         ```
+        If it doesn't work at the first try you may have to use 'export DISPLAY=:0' to set the primary display as an environment variable
         NOTE: On Windows and MacOS you may have to install an XServer Software like VcXsrv, Xming (For Windows) or XQuartz (For MacOS) and get the WSL/XServer IP Address using 'ipconfig'
      - Run it with the following Command:
         ```
@@ -102,7 +103,6 @@ SpineGTK is a Cross-Platform GUI Launcher for Spine made with GTKSharp and Mono.
 ![AddGameScreenshot](SpineGTKScreen1.jpg)
 
 - Click the Ok/Enter Button
-- If you don't see the game you've just added try to reload the Software.
 - Click the new game's button to run it
 ## Building from Source
 - The simplest way to build this project is installing MonoDevelop and make it compile the project by itself:

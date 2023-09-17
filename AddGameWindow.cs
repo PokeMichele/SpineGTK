@@ -76,6 +76,9 @@ namespace SpineGTK_v1
             }
 
             this.Destroy();
+
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.UpdateMainWindow();
         }
 
         protected void OnBtnCancel1Clicked(object sender, EventArgs e)

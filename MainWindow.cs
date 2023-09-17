@@ -123,7 +123,30 @@ public partial class MainWindow : Gtk.Window
         }
     }
 
+    public void UpdateMainWindow()
+    {
+        string home = Environment.GetEnvironmentVariable("HOME");
+        String path = home + "/SpineGTK/config.xml";
+        XmlDocument doc = new XmlDocument();
+        doc.Load(path);
+        XmlNodeList nodeList = doc.SelectNodes("/Games/Game");
 
+        VBox vbox = new VBox();
+        vbox.Spacing = 6;
+
+        foreach (XmlNode node in nodeList)
+        {
+            XmlNode childNode = node.SelectSingleNode("Name");
+            Button btn = new Button(childNode.InnerText);
+            btn.SetAlignment(0, 0);
+            btn.Clicked += OnButtonClicked;
+            vbox.Add(btn);
+        }
+
+        fixed1.Remove(vbox);
+        fixed1.Add(vbox);
+        fixed1.ShowAll();
+    }
 
     protected void OnDeleteEvent(object sender, DeleteEventArgs a)
     {
