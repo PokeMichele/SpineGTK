@@ -22,6 +22,10 @@ namespace SpineGTK_v1
 
 		private global::Gtk.Entry entry1;
 
+		private global::Gtk.Label lblGameIcon;
+
+		private global::Gtk.Entry entry3;
+
 		protected virtual void Build()
 		{
 			global::Stetic.Gui.Initialize(this);
@@ -30,6 +34,7 @@ namespace SpineGTK_v1
 			this.Title = global::Mono.Unix.Catalog.GetString("Add Game");
 			this.WindowPosition = ((global::Gtk.WindowPosition)(4));
 			this.Resizable = false;
+			//this.AllowGrow = false;
 			// Container child SpineGTK_v1.AddGameWindow.Gtk.Container+ContainerChild
 			this.fixed1 = new global::Gtk.Fixed();
 			this.fixed1.Name = "fixed1";
@@ -49,7 +54,7 @@ namespace SpineGTK_v1
 			this.fixed1.Add(this.lblGameName);
 			global::Gtk.Fixed.FixedChild w2 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.lblGameName]));
 			w2.X = 6;
-			w2.Y = 8;
+			w2.Y = 12;
 			// Container child fixed1.Gtk.Fixed+FixedChild
 			this.lblGameDirectory = new global::Gtk.Label();
 			this.lblGameDirectory.Name = "lblGameDirectory";
@@ -57,7 +62,7 @@ namespace SpineGTK_v1
 			this.fixed1.Add(this.lblGameDirectory);
 			global::Gtk.Fixed.FixedChild w3 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.lblGameDirectory]));
 			w3.X = 6;
-			w3.Y = 43;
+			w3.Y = 44;
 			// Container child fixed1.Gtk.Fixed+FixedChild
 			this.entry2 = new global::Gtk.Entry();
 			this.entry2.CanFocus = true;
@@ -110,13 +115,31 @@ namespace SpineGTK_v1
 			global::Gtk.Fixed.FixedChild w8 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.entry1]));
 			w8.X = 119;
 			w8.Y = 7;
+			// Container child fixed1.Gtk.Fixed+FixedChild
+			this.lblGameIcon = new global::Gtk.Label();
+			this.lblGameIcon.Name = "lblGameIcon";
+			this.lblGameIcon.LabelProp = global::Mono.Unix.Catalog.GetString("Game Icon:");
+			this.fixed1.Add(this.lblGameIcon);
+			global::Gtk.Fixed.FixedChild w9 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.lblGameIcon]));
+			w9.X = 6;
+			w9.Y = 76;
+			// Container child fixed1.Gtk.Fixed+FixedChild
+			this.entry3 = new global::Gtk.Entry();
+			this.entry3.CanFocus = true;
+			this.entry3.Name = "entry3";
+			this.entry3.IsEditable = true;
+			this.entry3.InvisibleChar = '•';
+			this.fixed1.Add(this.entry3);
+			global::Gtk.Fixed.FixedChild w10 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.entry3]));
+			w10.X = 119;
+			w10.Y = 71;
 			this.Add(this.fixed1);
 			if ((this.Child != null))
 			{
 				this.Child.ShowAll();
 			}
-			this.DefaultWidth = 402;
-			this.DefaultHeight = 307;
+			this.DefaultWidth = 404;
+			this.DefaultHeight = 314;
 			this.Show();
 			this.btnEnter1.Clicked += new global::System.EventHandler(this.OnBtnEnter1Clicked);
 			this.btnCancel1.Clicked += new global::System.EventHandler(this.OnBtnCancel1Clicked);

@@ -54,6 +54,9 @@
     <Reference Include="System.IO.Compression" />
     <Reference Include="System.IO.Compression.FileSystem" />
     <Reference Include="System.Net" />
+    <Reference Include="Aspose.Imaging">
+      <HintPath>packages\Aspose.Imaging.23.10.0\lib\net40\Aspose.Imaging.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="gtk-gui\gui.stetic">
@@ -68,6 +71,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="AddGameWindow.cs" />
     <Compile Include="gtk-gui\SpineGTK_v1.AddGameWindow.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

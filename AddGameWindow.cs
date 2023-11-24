@@ -7,6 +7,7 @@ using System.Linq;
 using SpineGTK_v1;
 using System.Net;
 using System.Diagnostics;
+using Aspose.Imaging;
 
 namespace SpineGTK_v1
 {
@@ -57,6 +58,21 @@ namespace SpineGTK_v1
                     XElement xml = new XElement("Game");
                     xml.Add(new XElement("Name", entry1.Text));
                     xml.Add(new XElement("Directory", entry2.Text));
+                    if (!string.IsNullOrEmpty(entry3.Text)) // Check if entry3 (image path) is provided
+                    {
+
+                        if (!Directory.Exists(home + "/SpineGTK/Icons"))
+                        {
+                            DirectoryInfo di = Directory.CreateDirectory(home + "/SpineGTK/Icons");
+                        }
+                        File.Copy(entry3.Text, home + "/SpineGTK/Icons/" + System.IO.Path.GetFileName(entry3.Text), true); //Overwrite option enabled to avoid errors
+                        using (Image image = Image.Load(home + "/SpineGTK/Icons/" + System.IO.Path.GetFileName(entry3.Text)))
+                        {
+                            image.Resize(64, 64);
+                            image.Save(home + "/SpineGTK/Icons/" + System.IO.Path.GetFileName(entry3.Text));
+                        }
+                        xml.Add(new XElement("Icon", home + "/SpineGTK/Icons/" + System.IO.Path.GetFileName(entry3.Text)));
+                    }
 
                     if (Xdoc.Descendants().Count() > 0)
                     {
@@ -72,7 +88,7 @@ namespace SpineGTK_v1
             }
             else
             {
-                Console.WriteLine("ERROR: All Text Fields must be filled.");
+                Console.WriteLine("ERROR: You didn't fill an important text field.");
             }
 
             this.Destroy();

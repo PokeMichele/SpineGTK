@@ -6,7 +6,7 @@
   <import>
     <widget-library name="../bin/Debug/SpineGTK_v1.exe" internal="true" />
   </import>
-  <widget class="Gtk.Window" id="MainWindow" design-size="1889 940">
+  <widget class="Gtk.Window" id="MainWindow" design-size="1889 944">
     <property name="MemberName" />
     <property name="Title" translatable="yes">SpineGTK</property>
     <property name="WindowPosition">CenterOnParent</property>
@@ -35,7 +35,7 @@
       </widget>
     </child>
   </widget>
-  <widget class="Gtk.Window" id="SpineGTK_v1.AddGameWindow" design-size="402 307">
+  <widget class="Gtk.Window" id="SpineGTK_v1.AddGameWindow" design-size="404 314">
     <property name="MemberName" />
     <property name="Title" translatable="yes">Add Game</property>
     <property name="WindowPosition">CenterOnParent</property>
@@ -62,7 +62,7 @@
           </widget>
           <packing>
             <property name="X">6</property>
-            <property name="Y">8</property>
+            <property name="Y">12</property>
           </packing>
         </child>
         <child>
@@ -72,7 +72,7 @@
           </widget>
           <packing>
             <property name="X">6</property>
-            <property name="Y">43</property>
+            <property name="Y">44</property>
           </packing>
         </child>
         <child>
@@ -141,6 +141,28 @@
           <packing>
             <property name="X">119</property>
             <property name="Y">7</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Label" id="lblGameIcon">
+            <property name="MemberName" />
+            <property name="LabelProp" translatable="yes">Game Icon:</property>
+          </widget>
+          <packing>
+            <property name="X">6</property>
+            <property name="Y">76</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Entry" id="entry3">
+            <property name="MemberName" />
+            <property name="CanFocus">True</property>
+            <property name="IsEditable">True</property>
+            <property name="InvisibleChar">•</property>
+          </widget>
+          <packing>
+            <property name="X">119</property>
+            <property name="Y">71</property>
           </packing>
         </child>
       </widget>

@@ -47,9 +47,15 @@ public partial class MainWindow : Gtk.Window
         foreach (XmlNode node in nodeList)
         {
             XmlNode childNode = node.SelectSingleNode("Name");
+            XmlNode imageNode = node.SelectSingleNode("Icon");
 
             Button btn = new Button(childNode.InnerText);
             btn.SetAlignment(0, 0);
+            if (imageNode != null)
+            {
+                Image iconImage = new Image(imageNode.InnerText);
+                btn.Image = iconImage;
+            }
             btn.Clicked += OnButtonClicked;
             vbox.Add(btn);
         }
@@ -137,8 +143,15 @@ public partial class MainWindow : Gtk.Window
         foreach (XmlNode node in nodeList)
         {
             XmlNode childNode = node.SelectSingleNode("Name");
+            XmlNode imageNode = node.SelectSingleNode("Icon");
+
             Button btn = new Button(childNode.InnerText);
             btn.SetAlignment(0, 0);
+            if (imageNode != null)
+            {
+                Image iconImage = new Image(imageNode.InnerText);
+                btn.Image = iconImage;
+            }
             btn.Clicked += OnButtonClicked;
             vbox.Add(btn);
         }
