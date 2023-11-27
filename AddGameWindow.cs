@@ -7,7 +7,9 @@ using System.Linq;
 using SpineGTK_v1;
 using System.Net;
 using System.Diagnostics;
-using Aspose.Imaging;
+using Amr;
+using System.Drawing;
+using System.Drawing.Imaging;
 
 namespace SpineGTK_v1
 {
@@ -66,10 +68,11 @@ namespace SpineGTK_v1
                             DirectoryInfo di = Directory.CreateDirectory(home + "/SpineGTK/Icons");
                         }
                         File.Copy(entry3.Text, home + "/SpineGTK/Icons/" + System.IO.Path.GetFileName(entry3.Text), true); //Overwrite option enabled to avoid errors
-                        using (Image image = Image.Load(home + "/SpineGTK/Icons/" + System.IO.Path.GetFileName(entry3.Text)))
+                        using (var newImage = Amr.Resizer.FixedSize(home + "/SpineGTK/Icons/" + System.IO.Path.GetFileName(entry3.Text), 64, 64))
                         {
-                            image.Resize(64, 64);
-                            image.Save(home + "/SpineGTK/Icons/" + System.IO.Path.GetFileName(entry3.Text));
+                            newImage.Save(home + "/SpineGTK/Icons/" + System.IO.Path.GetFileName(entry3.Text), ImageFormat.Png);
+
+                            newImage.Dispose();
                         }
                         xml.Add(new XElement("Icon", home + "/SpineGTK/Icons/" + System.IO.Path.GetFileName(entry3.Text)));
                     }
