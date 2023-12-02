@@ -7,6 +7,8 @@ public partial class MainWindow
 
 	private global::Gtk.Button btnAddGame;
 
+	private global::Gtk.Button btnRemoveGame;
+
 	protected virtual void Build()
 	{
 		global::Stetic.Gui.Initialize(this);
@@ -31,6 +33,17 @@ public partial class MainWindow
 		global::Gtk.Fixed.FixedChild w1 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.btnAddGame]));
 		w1.X = 1800;
 		w1.Y = 910;
+		// Container child fixed1.Gtk.Fixed+FixedChild
+		this.btnRemoveGame = new global::Gtk.Button();
+		this.btnRemoveGame.CanFocus = true;
+		this.btnRemoveGame.Name = "btnRemoveGame";
+		this.btnRemoveGame.UseStock = true;
+		this.btnRemoveGame.UseUnderline = true;
+		this.btnRemoveGame.Label = "gtk-delete";
+		this.fixed1.Add(this.btnRemoveGame);
+		global::Gtk.Fixed.FixedChild w2 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.btnRemoveGame]));
+		w2.X = 1720;
+		w2.Y = 910;
 		this.Add(this.fixed1);
 		if ((this.Child != null))
 		{
@@ -39,5 +52,6 @@ public partial class MainWindow
 		this.Show();
 		this.DeleteEvent += new global::Gtk.DeleteEventHandler(this.OnDeleteEvent);
 		this.btnAddGame.Clicked += new global::System.EventHandler(this.OnBtnAddGameClicked);
+		this.btnRemoveGame.Clicked += new global::System.EventHandler(this.OnBtnRemoveGameClicked);
 	}
 }

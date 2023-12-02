@@ -171,6 +171,11 @@ public partial class MainWindow : Gtk.Window
     {
         AddGameWindow addGameWindow = new AddGameWindow();
         addGameWindow.Show();
+    }
 
+    protected void OnBtnRemoveGameClicked(object sender, EventArgs e)
+    {
+        RemoveGameWindow removeGameWindow = new RemoveGameWindow();
+        removeGameWindow.Show();
     }
 }

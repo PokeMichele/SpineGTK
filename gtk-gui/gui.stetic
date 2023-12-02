@@ -32,6 +32,21 @@
             <property name="Y">910</property>
           </packing>
         </child>
+        <child>
+          <widget class="Gtk.Button" id="btnRemoveGame">
+            <property name="MemberName" />
+            <property name="CanFocus">True</property>
+            <property name="UseStock">True</property>
+            <property name="Type">StockItem</property>
+            <property name="StockId">gtk-delete</property>
+            <signal name="Clicked" handler="OnBtnRemoveGameClicked" />
+            <property name="label">gtk-delete</property>
+          </widget>
+          <packing>
+            <property name="X">1720</property>
+            <property name="Y">910</property>
+          </packing>
+        </child>
       </widget>
     </child>
   </widget>
@@ -163,6 +178,47 @@
           <packing>
             <property name="X">119</property>
             <property name="Y">71</property>
+          </packing>
+        </child>
+      </widget>
+    </child>
+  </widget>
+  <widget class="Gtk.Window" id="SpineGTK_v1.RemoveGameWindow" design-size="393 344">
+    <property name="MemberName" />
+    <property name="Title" translatable="yes">Remove Game</property>
+    <property name="WindowPosition">CenterOnParent</property>
+    <child>
+      <widget class="Gtk.Fixed" id="fixed2">
+        <property name="MemberName" />
+        <property name="HasWindow">False</property>
+        <child>
+          <widget class="Gtk.Button" id="btnDelete">
+            <property name="MemberName" />
+            <property name="CanFocus">True</property>
+            <property name="UseStock">True</property>
+            <property name="Type">StockItem</property>
+            <property name="StockId">gtk-delete</property>
+            <signal name="Clicked" handler="OnBtnDeleteClicked" />
+            <property name="label">gtk-delete</property>
+          </widget>
+          <packing>
+            <property name="X">312</property>
+            <property name="Y">300</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Button" id="btnCancel">
+            <property name="MemberName" />
+            <property name="CanFocus">True</property>
+            <property name="UseStock">True</property>
+            <property name="Type">StockItem</property>
+            <property name="StockId">gtk-cancel</property>
+            <signal name="Clicked" handler="OnBtnCancelClicked" />
+            <property name="label">gtk-cancel</property>
+          </widget>
+          <packing>
+            <property name="X">230</property>
+            <property name="Y">300</property>
           </packing>
         </child>
       </widget>

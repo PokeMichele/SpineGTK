@@ -72,6 +72,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="AddGameWindow.cs" />
     <Compile Include="gtk-gui\SpineGTK_v1.AddGameWindow.cs" />
+    <Compile Include="RemoveGameWindow.cs" />
+    <Compile Include="gtk-gui\SpineGTK_v1.RemoveGameWindow.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
