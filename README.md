@@ -96,14 +96,22 @@ SpineGTK is a Cross-Platform GUI Launcher for Spine made with GTKSharp and Mono.
         ```
         If you prefer you can create a shell script.
 ## Behaviour
-- Click "Add Game" button
-- If you are running the software for the first time click the "Install Spine" button and wait until the software unlocks itself (it may take a while depending on your connection speed).
-- Insert a Name for the Game and the Path of the file (you must use a file format that is compatible with Spine).
+- Adding a Game:
+    - Click "Add Game" button
+    - If you are running the software for the first time click the "Install Spine" button and wait until the software unlocks itself (it may take a while depending on your connection speed).
+    - Insert a Name for the Game, the Path of the file (you must use a file format that is compatible with Spine), and an Icon that will appear in the Launcher (optional).
 
-![AddGameScreenshot](SpineGTKScreen1.jpg)
+    ![AddGameScreenshot](SpineGTKScreen1.jpg)
 
-- Click the Ok/Enter Button
-- Click the new game's button to run it
+    - Click the Ok/Enter Button
+    - Click the new game's button to run it
+- Removing a Game:
+    - Click on "Remove Game" button
+    - Select the games you want to remove from the list
+    
+    ![RemoveGameScreenshot](SpineGTKScreen2.jpg)
+
+    - Click on Remove/Delete Button
 ## Building from Source
 - The simplest way to build this project is installing MonoDevelop and make it compile the project by itself:
     - Install MonoDevelop (See the official [Installation Instructions](https://www.monodevelop.com/download/))
@@ -124,4 +132,4 @@ SpineGTK is a Cross-Platform GUI Launcher for Spine made with GTKSharp and Mono.
 ## Troubleshooting
 - If you run into some problems before opening an issue make sure it's not a Spine problem. If so, check that the error hasn't already been reported in [Their Repository](https://github.com/devofspine/spine)
 ## Credits & License
- - SpineGTK is made using [Mono](https://www.mono-project.com/), [GTKSharp](https://www.mono-project.com/docs/gui/gtksharp/) and [Docker](https://www.docker.com/), wraps [Spine](https://github.com/devofspine/spine/) with a GUI and it's released under [CC BY-NC 4.0 License](https://creativecommons.org/licenses/by-nc/4.0/).
+ - SpineGTK is made using [Mono](https://www.mono-project.com/), [GTKSharp](https://www.mono-project.com/docs/gui/gtksharp/), [Amr.ImageResizer](https://amr-design.net/NuGet/) and [Docker](https://www.docker.com/), wraps [Spine](https://github.com/devofspine/spine/) with a GUI and it's released under [CC BY-NC 4.0 License](https://creativecommons.org/licenses/by-nc/4.0/).
